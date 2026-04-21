@@ -504,7 +504,7 @@
     "title": "Zip Bombs",
     "authors": [
       "Crossbow",
-      "-cp77fk4r"
+      "cp77fk4r"
     ],
     "tags": [
       "malware-analysis",
@@ -550,7 +550,7 @@
     "title": "ניתוח ה-Conficker",
     "authors": [
       "הרצל לוי",
-      "-cp77fk4r"
+      "cp77fk4r"
     ],
     "tags": [
       "malware-analysis",
@@ -583,7 +583,7 @@
     "title": "פירוט טכנולוגיות ה-Firewalling השונות",
     "authors": [
       "יגאל סולימאני",
-      "-cp77fk4r"
+      "cp77fk4r"
     ],
     "tags": [
       "network-security"
@@ -3874,7 +3874,7 @@
     "authors": [
       "יובל (tsif) נתיב",
       "להד לודר",
-      "-5Finger"
+      "5Finger"
     ],
     "tags": [
       "malware-analysis",
@@ -5623,7 +5623,7 @@
     "title": "עכשיו! מתי נסנכרן?",
     "authors": [
       "עומר כספי",
-      "-0xDEAD6057"
+      "0xDEAD6057"
     ],
     "tags": [
       "exploitation",
@@ -5738,7 +5738,7 @@
     "title": "פתרון אתגר הסייבר 2016 של יחידת אופק",
     "authors": [
       "תומר זית",
-      "-D4d"
+      "D4d"
     ],
     "tags": [
       "ctf-writeup",
@@ -6524,7 +6524,7 @@
     "title": "RHME3 Exploit Challenge",
     "authors": [
       "T0bl3r0n3",
-      "-Bl4d3"
+      "Bl4d3"
     ],
     "tags": [
       "ctf-writeup",
@@ -7614,7 +7614,7 @@
     "title": "אתגר השב\"כ 2018",
     "authors": [
       "Dvd848",
-      "-YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
@@ -7889,7 +7889,7 @@
     "title": "סדרת אתגרי ArkCon - 2019",
     "authors": [
       "Dvd848",
-      "-YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
@@ -7956,7 +7956,7 @@
     "title": "סדרת אתגר ArkCon (OnSite) - 2019",
     "authors": [
       "Dvd848",
-      "-YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
@@ -8082,12 +8082,7 @@
     "date": "2019-07-31",
     "title": "סדרת אתגרי BSidesTLV 2019",
     "authors": [
-      "JCTF (חבברי הקבוצה: YaakovCohen88",
-      "Schtrudel",
-      "Narcissus",
-      "Moshe Wagner",
-      "Israel Erlich",
-      "ו-Dvd848)"
+      "JCTF (חבברי הקבוצה: YaakovCohen88, Schtrudel, Narcissus, Moshe Wagner, Israel Erlich, ו-Dvd848)"
     ],
     "tags": [
       "ctf-writeup",
@@ -8196,7 +8191,7 @@
     "title": "סדרת אתגרי Check Point CSA 2019",
     "authors": [
       "Dvd848",
-      "- YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
@@ -8897,7 +8892,7 @@
     "title": "סדרת אתגרי Matrix Defense CTF - 2020",
     "authors": [
       "Dvd848",
-      "-YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
@@ -9609,7 +9604,7 @@
     "authors": [
       "Dvd848",
       "zVaz",
-      "-YaakovCohen88"
+      "YaakovCohen88"
     ],
     "tags": [
       "ctf-writeup",
