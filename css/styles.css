@@ -748,7 +748,7 @@ details.issue[open] .issue-count::before { content: "▾ "; }
 }
 .author-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   padding: 8px 10px;
   border-radius: 2px;
@@ -756,6 +756,7 @@ details.issue[open] .issue-count::before { content: "▾ "; }
   position: relative;
   border-bottom: 1px dotted transparent;
   transition: background 120ms, border-color 120ms;
+  -webkit-tap-highlight-color: transparent;
 }
 .author-row:hover {
   background: var(--bg-elev);
@@ -1216,11 +1217,14 @@ a.col {
   /* Article cards — already 1-col at 600px; just tighten padding */
   .articles > article { padding: 18px 0; }
 
-  /* Author grid — two compact columns */
+  /* Author grid — two compact columns on tablet-ish widths */
   .author-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2px 16px;
   }
+  /* Author page: wider search, isolate bidi on mixed Hebrew/Latin names */
+  .author-filter { max-width: none; }
+  .author-name { unicode-bidi: isolate; min-width: 0; }
 
   /* Dashboard */
   .dash { gap: 12px; }
@@ -1233,6 +1237,34 @@ a.col {
 /* ------------------------------------------------------------ */
 /* Mobile — narrow phones (<= 420px)                             */
 /* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* Portrait phones (<= 600px) — single-column lists, bigger taps */
+/* ------------------------------------------------------------ */
+@media (max-width: 600px) {
+  /* Author grid goes to 1 column so Hebrew names aren't cramped + ellipsed. */
+  .author-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  /* 44px minimum tap target (Apple HIG) + hairline between rows for clarity. */
+  .author-row {
+    padding: 12px 10px;
+    min-height: 44px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .author-row:last-child { border-bottom-color: transparent; }
+
+  /* by-issue summary — keep issue-no + date on the same line but tighten gaps. */
+  details.issue summary {
+    padding: 12px 12px;
+    gap: 10px;
+  }
+  .issue-date { font-size: 10.5px; }
+
+  /* Dashboard KPI values were already scaled at 900px; a bit smaller here. */
+  .kpi-value { font-size: 28px; }
+}
+
 @media (max-width: 420px) {
   main { padding-inline: 12px; }
 
