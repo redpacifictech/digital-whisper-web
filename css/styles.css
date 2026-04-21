@@ -252,7 +252,17 @@ main {
 /* Sidebar                                                       */
 /* ------------------------------------------------------------ */
 aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc(100vh - 120px); overflow: hidden; display: flex; flex-direction: column; }
-.sidebar-toggle { display: none; }               /* hidden on desktop — revealed at <=900px */
+/* Toggle is hidden on desktop; these properties also ensure consistent
+   rendering on iOS Safari, which otherwise applies its own "button" look. */
+.sidebar-toggle {
+  display: none;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Route iOS taps straight to the button, not to its child spans. */
+.sidebar-toggle > * { pointer-events: none; }
 .sidebar-body {
   display: flex;
   flex-direction: column;

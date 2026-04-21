@@ -196,9 +196,8 @@
 
     if (els.sidebarToggle && els.sidebarBody) {
       els.sidebarToggle.addEventListener("click", () => {
-        const open = els.sidebarToggle.getAttribute("aria-expanded") === "true";
-        els.sidebarToggle.setAttribute("aria-expanded", open ? "false" : "true");
-        els.sidebarBody.classList.toggle("open", !open);
+        const open = els.sidebarBody.classList.toggle("open");
+        els.sidebarToggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
     }
   }
