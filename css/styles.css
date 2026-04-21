@@ -64,6 +64,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;                 /* iOS: stop auto-resize in landscape */
 }
 body {
   font-family: var(--font-ui);
@@ -72,7 +73,11 @@ body {
   margin: 0;
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;                             /* dynamic vh — iOS Safari URL bar aware */
+  overflow-x: hidden;                             /* safety net against phantom horizontal scroll */
+  -webkit-tap-highlight-color: transparent;
 }
+button, summary, a.author-row, a.dash-card { touch-action: manipulation; }  /* no 300ms tap delay, no double-tap zoom */
 
 /* Film-grain background — subtle atmosphere */
 body::before {
@@ -107,13 +112,22 @@ kbd {
 .site-header {
   position: sticky;
   top: 0; z-index: 30;
-  background: rgba(21, 27, 40, 0.88);
-  backdrop-filter: saturate(150%) blur(12px);
-  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  background: rgb(21, 27, 40);                    /* solid fallback — iOS versions without backdrop-filter still get a readable header */
   border-bottom: 1px solid var(--hairline);
   box-shadow: 0 1px 0 0 var(--accent-soft);
+  max-width: 100%;
 }
-html:not(.dark) .site-header { background: rgba(244, 246, 251, 0.92); }
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(21, 27, 40, 0.88);
+    backdrop-filter: saturate(150%) blur(12px);
+    -webkit-backdrop-filter: saturate(150%) blur(12px);
+  }
+}
+html:not(.dark) .site-header { background: rgb(244, 246, 251); }
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  html:not(.dark) .site-header { background: rgba(244, 246, 251, 0.92); }
+}
 
 .site-header-inner {
   max-width: var(--content-w);
@@ -251,7 +265,7 @@ main {
 /* ------------------------------------------------------------ */
 /* Sidebar                                                       */
 /* ------------------------------------------------------------ */
-aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc(100vh - 120px); overflow: hidden; display: flex; flex-direction: column; }
+aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc(100vh - 120px); max-height: calc(100dvh - 120px); overflow: hidden; display: flex; flex-direction: column; }
 /* Toggle is hidden on desktop; these properties also ensure consistent
    rendering on iOS Safari, which otherwise applies its own "button" look. */
 .sidebar-toggle {
@@ -1106,6 +1120,18 @@ a.col {
   main { padding: 20px 14px 48px; }
   .site-footer { padding: 20px 14px 32px; }
 
+  /* Any input <16px triggers iOS Safari's auto-zoom on focus — force all to 16px. */
+  .search-input,
+  .year-select,
+  input[type="search"],
+  input[type="text"] {
+    font-size: 16px;
+  }
+
+  /* mix-blend-mode has repaint bugs on iOS Safari + the grain is barely visible
+     on small screens anyway — turn it off below 900px for compat and perf. */
+  body::before { display: none; }
+
   /* Index sidebar un-sticks and collapses into an inline toggle drawer */
   aside.sidebar {
     position: static;
@@ -1161,7 +1187,9 @@ a.col {
     display: block;
     margin-top: 10px;
     max-height: 62vh;
+    max-height: 62dvh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     border: 1px solid var(--hairline);
     border-radius: 2px;
     padding: 12px 14px;
@@ -1207,9 +1235,6 @@ a.col {
 /* ------------------------------------------------------------ */
 @media (max-width: 420px) {
   main { padding-inline: 12px; }
-
-  /* 16px prevents iOS Safari from auto-zooming on input focus */
-  .search-input { font-size: 16px; }
 
   /* Nav scrolls horizontally if links still overflow */
   .nav {
