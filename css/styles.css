@@ -1093,14 +1093,16 @@ a.col {
 /* and there's no intermediate range where the header overflows. */
 /* ------------------------------------------------------------ */
 @media (max-width: 900px) {
-  /* Header stacks: brand on row 1, search row 2, nav row 3 */
+  /* Header stacks: brand+theme toggle on row 1, search row 2, nav row 3 */
   .site-header-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px 14px;
-    padding: 12px 16px;
+    padding: 12px 16px 14px;
+    padding-inline-end: 60px;                     /* room for the absolutely-positioned theme toggle */
     min-height: 0;
+    position: relative;
   }
   .brand { flex: 1 1 auto; }
   .brand-mark { font-size: 18px; }
@@ -1111,11 +1113,20 @@ a.col {
     margin: 0 auto;
     justify-self: center;
   }
+  /* Pull the theme-toggle out of nav flow and pin it to the top-right of the
+     header. Frees the nav row from having to fit 6 items. */
+  .theme-toggle {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 14px;
+    width: 36px;
+    height: 36px;
+  }
   .nav {
     flex: 1 1 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 14px;
+    gap: 8px 14px;
     font-size: 13px;
   }
 
@@ -1264,14 +1275,12 @@ a.col {
 @media (max-width: 420px) {
   main { padding-inline: 12px; }
 
-  /* Nav scrolls horizontally if links still overflow */
+  /* Nav stays wrapping (not scrolling) — predictable in RTL across browsers.
+     Slightly smaller text + tighter gaps so all 5 links fit on two rows. */
   .nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    font-size: 12.5px;
+    gap: 8px 12px;
   }
-  .nav::-webkit-scrollbar { display: none; }
 
   .author-grid { grid-template-columns: 1fr; }
 }
