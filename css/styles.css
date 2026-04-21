@@ -20,6 +20,9 @@
   --accent-soft: rgba(147, 197, 253, 0.13);
   --accent-line: rgba(147, 197, 253, 0.38);
   --accent-glow: rgba(147, 197, 253, 0.32);
+  --accent-warm: #eab676;                    /* muted wheat — warm counterpoint to steel blue */
+  --accent-warm-soft: rgba(234, 182, 118, 0.15);
+  --accent-warm-line: rgba(234, 182, 118, 0.42);
   --danger:    #fb7185;
 
   /* typography */
@@ -46,6 +49,9 @@ html:not(.dark) {
   --accent-soft: rgba(30, 64, 175, 0.09);
   --accent-line: rgba(30, 64, 175, 0.32);
   --accent-glow: rgba(30, 64, 175, 0.0);
+  --accent-warm: #b37a1f;                    /* toasted amber — warm counterpoint on paper */
+  --accent-warm-soft: rgba(179, 122, 31, 0.12);
+  --accent-warm-line: rgba(179, 122, 31, 0.38);
   color-scheme: light;
 }
 
@@ -144,6 +150,7 @@ html.dark .brand-mark { text-shadow: 0 0 18px var(--accent-glow); }
   content: "◈ ";
   color: var(--accent);
   font-weight: 400;
+  text-shadow: 0 0 10px var(--accent-warm-soft), 0 0 2px var(--accent-warm);
 }
 .brand-sub {
   font-family: var(--font-mono);
@@ -206,7 +213,7 @@ html.dark .brand-mark { text-shadow: 0 0 18px var(--accent-glow); }
 .nav a:hover { color: var(--text); }
 .nav a[aria-current="page"] {
   color: var(--text);
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--accent-warm);
 }
 
 .theme-toggle {
@@ -319,8 +326,8 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
 }
 .tag-row:hover::before { opacity: 0.6; }
 .tag-row.selected::before {
-  background: var(--accent);
-  opacity: 0.22;
+  background: var(--accent-warm);
+  opacity: 0.28;
 }
 .tag-row > * { position: relative; z-index: 1; }
 .tag-name {
@@ -334,14 +341,14 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   unicode-bidi: isolate;
 }
 .tag-row:hover .tag-name { color: var(--text); }
-.tag-row.selected .tag-name { color: var(--accent); font-weight: 500; }
+.tag-row.selected .tag-name { color: var(--accent-warm); font-weight: 500; }
 .tag-count {
   font-family: var(--font-mono);
   font-size: 10.5px;
   color: var(--faint);
   font-variant-numeric: tabular-nums;
 }
-.tag-row.selected .tag-count { color: var(--accent); }
+.tag-row.selected .tag-count { color: var(--accent-warm); }
 
 /* sidebar scrollbar */
 .tag-list::-webkit-scrollbar { width: 6px; }
@@ -383,12 +390,12 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   padding-block: 3px;
   padding-inline-start: 10px;
   padding-inline-end: 6px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
+  background: var(--accent-warm-soft);
+  border: 1px solid var(--accent-warm-line);
   border-radius: 2px;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--accent);
+  color: var(--accent-warm);
 }
 .active-chip .remove {
   cursor: pointer;
@@ -449,7 +456,7 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   font-weight: 500;
   color: var(--text);
   display: inline;
-  background-image: linear-gradient(var(--accent), var(--accent));
+  background-image: linear-gradient(var(--accent-warm), var(--accent-warm));
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 0 1px;
@@ -468,6 +475,24 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
 .article-authors::before {
   content: "— ";
   color: var(--faint);
+}
+.author-link {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px dotted transparent;
+  transition: color 120ms, border-bottom-color 120ms;
+}
+.author-link:hover {
+  color: var(--accent-warm);
+  border-bottom-color: var(--accent-warm-line);
+}
+.author-link.active {
+  color: var(--accent-warm);
+  border-bottom-color: var(--accent-warm);
 }
 .article-tags {
   margin-top: 10px;
@@ -495,9 +520,9 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   background: var(--accent-soft);
 }
 .pill.active {
-  background: var(--accent-soft);
-  border-color: var(--accent-line);
-  color: var(--accent);
+  background: var(--accent-warm-soft);
+  border-color: var(--accent-warm-line);
+  color: var(--accent-warm);
 }
 
 /* Empty state */
@@ -510,7 +535,7 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
 .empty-glyph {
   font-family: var(--font-mono);
   font-size: 36px;
-  color: var(--faint);
+  color: var(--accent-warm);
   margin-bottom: 14px;
   letter-spacing: 0.2em;
 }
@@ -540,7 +565,7 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   width: 180px;
   height: 1px;
   margin: 0 auto 18px;
-  background: linear-gradient(90deg, transparent, var(--accent-line), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-line), var(--accent-warm), var(--accent-line), transparent);
   color: transparent;
   overflow: hidden;
   text-indent: -9999px;
@@ -560,9 +585,9 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
   position: absolute;
   inset-inline-start: 0;
   bottom: -1px;
-  width: 56px;
+  width: 88px;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
 }
 .page-kicker {
   display: inline-block;
@@ -579,7 +604,7 @@ aside.sidebar { position: sticky; top: 96px; align-self: start; max-height: calc
 }
 .page-kicker::before {
   content: "// ";
-  color: var(--faint);
+  color: var(--accent-warm);
 }
 .page-title {
   font-family: var(--font-title);
@@ -1023,3 +1048,88 @@ a.col {
 }
 .dash-card.is-link:focus-visible { transform: translateY(-1px); }
 
+/* ------------------------------------------------------------ */
+/* Mobile — phones and small tablets (<= 900px)                  */
+/* Matches the existing .index-layout collapse breakpoint so the */
+/* header, sidebar, and content all switch to mobile in one step */
+/* and there's no intermediate range where the header overflows. */
+/* ------------------------------------------------------------ */
+@media (max-width: 900px) {
+  /* Header stacks: brand on row 1, search row 2, nav row 3 */
+  .site-header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 12px 16px;
+    min-height: 0;
+  }
+  .brand { flex: 1 1 auto; }
+  .brand-mark { font-size: 18px; }
+  .brand-sub { display: none; }
+  .search-wrap {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .nav {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px 16px;
+    font-size: 12.5px;
+  }
+
+  /* Tighter page gutters */
+  main { padding: 20px 14px 48px; }
+  .site-footer { padding: 20px 14px 32px; }
+
+  /* Index sidebar must un-stick once the grid collapses */
+  aside.sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+  .index-layout { gap: 24px; }
+
+  /* Scale down oversized headings */
+  .page-title { font-size: 26px; }
+  .about h1 { font-size: 26px; }
+  .kpi-value { font-size: 32px; }
+
+  /* Article cards — already 1-col at 600px; just tighten padding */
+  .articles > article { padding: 18px 0; }
+
+  /* Author grid — two compact columns */
+  .author-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 16px;
+  }
+
+  /* Dashboard */
+  .dash { gap: 12px; }
+  .col-chart {
+    overflow-x: auto;
+    grid-auto-columns: minmax(22px, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------ */
+/* Mobile — narrow phones (<= 420px)                             */
+/* ------------------------------------------------------------ */
+@media (max-width: 420px) {
+  main { padding-inline: 12px; }
+
+  /* 16px prevents iOS Safari from auto-zooming on input focus */
+  .search-input { font-size: 16px; }
+
+  /* Nav scrolls horizontally if links still overflow */
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+
+  .author-grid { grid-template-columns: 1fr; }
+}

@@ -162,10 +162,18 @@
 
     els.articles.addEventListener("click", (ev) => {
       const pill = ev.target.closest(".pill");
-      if (!pill) return;
-      ev.preventDefault();
-      toggleTag(pill.dataset.tag);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (pill) {
+        ev.preventDefault();
+        toggleTag(pill.dataset.tag);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      const authorBtn = ev.target.closest(".author-link");
+      if (authorBtn) {
+        ev.preventDefault();
+        setQuery(authorBtn.dataset.author);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     });
 
     window.addEventListener("scroll", () => {
@@ -189,6 +197,16 @@
     else state.selectedTags.add(tag);
     state.shownCount = state.pageSize;
     refreshTagListSelection();
+    render();
+    writeHash();
+  }
+
+  function setQuery(q) {
+    const trimmed = q.trim();
+    // Toggle: click the same author again to clear the filter.
+    state.query = state.query === trimmed.toLowerCase() ? "" : trimmed.toLowerCase();
+    els.q.value = state.query ? trimmed : "";
+    state.shownCount = state.pageSize;
     render();
     writeHash();
   }
@@ -381,7 +399,15 @@
 
     const authors = document.createElement("div");
     authors.className = "article-authors";
-    authors.textContent = a.authors.join("  ·  ");
+    a.authors.forEach((author, i) => {
+      if (i > 0) authors.appendChild(document.createTextNode("  ·  "));
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "author-link" + (state.query === author.toLowerCase() ? " active" : "");
+      btn.dataset.author = author;
+      btn.textContent = author;
+      authors.appendChild(btn);
+    });
     body.appendChild(authors);
 
     if (a.tags?.length) {
