@@ -1,0 +1,227 @@
+[
+  {
+    "tag": "network-security",
+    "count": 223,
+    "description": "Network protocols, attacks, defenses, and infrastructure."
+  },
+  {
+    "tag": "reverse-engineering",
+    "count": 181,
+    "description": "Static and dynamic analysis of compiled binaries."
+  },
+  {
+    "tag": "exploitation",
+    "count": 175,
+    "description": "Binary exploitation, memory-corruption bugs, and mitigation bypasses."
+  },
+  {
+    "tag": "tooling",
+    "count": 169,
+    "description": "Security tooling, scripting, programming, and CS concepts."
+  },
+  {
+    "tag": "web-security",
+    "count": 163,
+    "description": "Web and API application attacks and defenses."
+  },
+  {
+    "tag": "malware-analysis",
+    "count": 135,
+    "description": "Analysis of malicious software and families."
+  },
+  {
+    "tag": "windows-internals",
+    "count": 128,
+    "description": "Windows userland, Win32 APIs, and platform internals."
+  },
+  {
+    "tag": "cryptography",
+    "count": 118,
+    "description": "Ciphers, protocols, key management, and crypto attacks."
+  },
+  {
+    "tag": "evasion",
+    "count": 96,
+    "description": "Detection and mitigation evasion techniques."
+  },
+  {
+    "tag": "hardware-security",
+    "count": 90,
+    "description": "Firmware, embedded, IoT, and hardware-level attacks."
+  },
+  {
+    "tag": "linux-internals",
+    "count": 83,
+    "description": "Linux userland and kernel."
+  },
+  {
+    "tag": "ctf-writeup",
+    "count": 68,
+    "description": "CTF challenges and walkthroughs."
+  },
+  {
+    "tag": "windows-kernel",
+    "count": 66,
+    "description": "Windows kernel, drivers, and kernel-mode security."
+  },
+  {
+    "tag": "code-injection",
+    "count": 61,
+    "description": "Code injection, hooking, and in-process manipulation."
+  },
+  {
+    "tag": "privacy",
+    "count": 59,
+    "description": "Privacy, anonymity, tracking, and data protection."
+  },
+  {
+    "tag": "forensics",
+    "count": 58,
+    "description": "Digital forensics, incident response, and artifact analysis."
+  },
+  {
+    "tag": "cloud-security",
+    "count": 57,
+    "description": "Cloud, container, and virtualization security."
+  },
+  {
+    "tag": "active-directory",
+    "count": 52,
+    "description": "Active Directory, Kerberos, and identity attacks."
+  },
+  {
+    "tag": "legal",
+    "count": 51,
+    "description": "Legal, regulatory, policy, and ethics topics."
+  },
+  {
+    "tag": "mobile-security",
+    "count": 47,
+    "description": "Android and iOS application and platform security."
+  },
+  {
+    "tag": "static-analysis",
+    "count": 45,
+    "description": "Static source or binary analysis."
+  },
+  {
+    "tag": "social-engineering",
+    "count": 37,
+    "description": "Human-factor attacks: phishing, deception, fraud."
+  },
+  {
+    "tag": "threat-intelligence",
+    "count": 35,
+    "description": "Threat intel, detection engineering, and defensive analytics."
+  },
+  {
+    "tag": "dynamic-analysis",
+    "count": 34,
+    "description": "Runtime analysis, debugging, instrumentation."
+  },
+  {
+    "tag": "ai-security",
+    "count": 28,
+    "description": "Attacks on and with ML/AI models, LLMs, agents."
+  },
+  {
+    "tag": "command-and-control",
+    "count": 28,
+    "description": "C2 infrastructure, beaconing, and botnets."
+  },
+  {
+    "tag": "osint",
+    "count": 26,
+    "description": "Open-source intelligence and reconnaissance."
+  },
+  {
+    "tag": "vulnerability-research",
+    "count": 26,
+    "description": "Vulnerability research, disclosure, and management."
+  },
+  {
+    "tag": "penetration-testing",
+    "count": 22,
+    "description": "Offensive security engagements and methodology."
+  },
+  {
+    "tag": "physical-security",
+    "count": 20,
+    "description": "Physical, biometric, and tamper security."
+  },
+  {
+    "tag": "steganography",
+    "count": 19,
+    "description": "Hiding data in carriers."
+  },
+  {
+    "tag": "cryptocurrency",
+    "count": 17,
+    "description": "Blockchain, cryptocurrency, and DeFi security."
+  },
+  {
+    "tag": "persistence",
+    "count": 17,
+    "description": "Persistence, lateral movement, and post-exploitation."
+  },
+  {
+    "tag": "side-channel",
+    "count": 16,
+    "description": "Side-channel attacks."
+  },
+  {
+    "tag": "denial-of-service",
+    "count": 15,
+    "description": "Denial-of-service and amplification attacks."
+  },
+  {
+    "tag": "game-hacking",
+    "count": 14,
+    "description": "Game hacking, cheats, and anti-cheat bypass."
+  },
+  {
+    "tag": "advanced-persistent-threat",
+    "count": 13,
+    "description": "APT campaigns and tradecraft."
+  },
+  {
+    "tag": "fuzzing",
+    "count": 11,
+    "description": "Fuzz testing techniques."
+  },
+  {
+    "tag": "ics-ot",
+    "count": 9,
+    "description": "Industrial control systems, SCADA, and OT security."
+  },
+  {
+    "tag": "password-attacks",
+    "count": 9,
+    "description": "Password and credential-guessing attacks."
+  },
+  {
+    "tag": "ransomware",
+    "count": 6,
+    "description": "Ransomware and destructive malware."
+  },
+  {
+    "tag": "history",
+    "count": 3,
+    "description": "Historical retrospectives on infosec events."
+  },
+  {
+    "tag": "physical-access",
+    "count": 3,
+    "description": "Attacks requiring physical or USB access."
+  },
+  {
+    "tag": "physical-rf",
+    "count": 3,
+    "description": "Radio/SDR exploration (when not strictly wireless-network)."
+  },
+  {
+    "tag": "symbolic-execution",
+    "count": 2,
+    "description": "Symbolic and concolic execution."
+  }
+]
