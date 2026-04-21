@@ -60,23 +60,30 @@
 <main>
   <div class="index-layout">
     <aside class="sidebar">
-      <div class="side-section">
-        <div class="side-header">
-          <span class="side-title">שנים</span>
-          <button id="years-clear" class="side-clear">reset</button>
+      <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-body">
+        <span class="sidebar-toggle-label">סינון</span>
+        <span class="sidebar-toggle-count" id="sidebar-toggle-count" aria-hidden="true"></span>
+        <span class="sidebar-toggle-chevron" aria-hidden="true">▾</span>
+      </button>
+      <div id="sidebar-body" class="sidebar-body">
+        <div class="side-section">
+          <div class="side-header">
+            <span class="side-title">שנים</span>
+            <button id="years-clear" class="side-clear">reset</button>
+          </div>
+          <div class="year-row">
+            <select id="year-from" class="year-select" aria-label="from year"></select>
+            <select id="year-to" class="year-select" aria-label="to year"></select>
+          </div>
         </div>
-        <div class="year-row">
-          <select id="year-from" class="year-select" aria-label="from year"></select>
-          <select id="year-to" class="year-select" aria-label="to year"></select>
-        </div>
-      </div>
 
-      <div class="side-section" style="flex: 1; display: flex; flex-direction: column; min-height: 0;">
-        <div class="side-header">
-          <span class="side-title">תגים</span>
-          <button id="tags-clear" class="side-clear">clear all</button>
+        <div class="side-section side-section-tags">
+          <div class="side-header">
+            <span class="side-title">תגים</span>
+            <button id="tags-clear" class="side-clear">clear all</button>
+          </div>
+          <div id="tag-list" class="tag-list"></div>
         </div>
-        <div id="tag-list" class="tag-list"></div>
       </div>
     </aside>
 

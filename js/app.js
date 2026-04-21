@@ -16,6 +16,9 @@
     resetAll: document.getElementById("reset-all"),
     statusCount: document.getElementById("status-count"),
     statusActive: document.getElementById("status-active"),
+    sidebarToggle: document.getElementById("sidebar-toggle"),
+    sidebarBody: document.getElementById("sidebar-body"),
+    sidebarToggleCount: document.getElementById("sidebar-toggle-count"),
   };
 
   const state = {
@@ -190,6 +193,22 @@
       readHash();
       render();
     });
+
+    if (els.sidebarToggle && els.sidebarBody) {
+      els.sidebarToggle.addEventListener("click", () => {
+        const open = els.sidebarToggle.getAttribute("aria-expanded") === "true";
+        els.sidebarToggle.setAttribute("aria-expanded", open ? "false" : "true");
+        els.sidebarBody.classList.toggle("open", !open);
+      });
+    }
+  }
+
+  function updateFilterCount() {
+    if (!els.sidebarToggleCount) return;
+    const n = state.selectedTags.size
+      + (state.yearFrom || state.yearTo ? 1 : 0)
+      + (state.query ? 1 : 0);
+    els.sidebarToggleCount.textContent = n > 0 ? n.toLocaleString("he-IL") : "";
   }
 
   function toggleTag(tag) {
@@ -299,6 +318,7 @@
     const filtered = currentFiltered();
     renderStatus(filtered.length);
     renderArticles(filtered);
+    updateFilterCount();
   }
 
   function renderStatus(n) {
