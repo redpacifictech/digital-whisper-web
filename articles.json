@@ -14147,5 +14147,149 @@
       "exploitation",
       "mobile-security"
     ]
+  },
+  {
+    "id": "0xB9-01",
+    "issue": 185,
+    "url": "https://www.digitalwhisper.co.il/issue185",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xB9/DW185-1-CVE-2025-20700.pdf",
+    "date": "2026-05-01",
+    "title": "כשהעיניים רואות את מה שהאוזניות לא משמיעות - ניתוח החולשה CVE-2025-20700",
+    "authors": [
+      "ידידיה בקורדזה"
+    ],
+    "tags": []
+  },
+  {
+    "id": "0xB9-02",
+    "issue": 185,
+    "url": "https://www.digitalwhisper.co.il/issue185",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xB9/DW185-2-AgentOrDoubleAgent.pdf",
+    "date": "2026-05-01",
+    "title": "סוכן או סוכן כפול? על OpenClaw ועל הדור החדש של איומי אבטחה במערכות סוכני AI",
+    "authors": [
+      "עומר מעין"
+    ],
+    "tags": [
+      "ai-security",
+      "exploitation",
+      "cloud-security",
+      "web-security"
+    ]
+  },
+  {
+    "id": "0xB9-03",
+    "issue": 185,
+    "url": "https://www.digitalwhisper.co.il/issue185",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xB9/DW185-3-RedAlertMalware.pdf",
+    "date": "2026-05-01",
+    "title": "צבע אדום? תגנו על הטלפון!",
+    "authors": [
+      "אשר ורד (A.I.V Dev)"
+    ],
+    "tags": [
+      "malware-analysis",
+      "mobile-security",
+      "reverse-engineering",
+      "evasion",
+      "social-engineering"
+    ]
+  },
+  {
+    "id": "0xB9-04",
+    "issue": 185,
+    "url": "https://www.digitalwhisper.co.il/issue185",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xB9/DW185-4-PredatorAnalysis.pdf",
+    "date": "2026-05-01",
+    "title": "מתג ההשמדה העצמית של Predator - טכניקות Anti-Analysis לא מתועדות ב-Spyware ל-iOS",
+    "authors": [
+      "ניר אברהם"
+    ],
+    "tags": []
+  },
+  {
+    "id": "0xB9-05",
+    "issue": 185,
+    "url": "https://www.digitalwhisper.co.il/issue185",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xB9/DW185-5-SLUB_Part1.pdf",
+    "date": "2026-05-01",
+    "title": "BabySteps into SLUB - חלק א'",
+    "authors": [
+      "נועם אפרגן"
+    ],
+    "tags": [
+      "linux-internals",
+      "exploitation",
+      "vulnerability-research"
+    ]
+  },
+  {
+    "id": "0xBA-01",
+    "issue": 186,
+    "url": "https://www.digitalwhisper.co.il/issue186",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xBA/DW186-1-NPM.pdf",
+    "date": "2026-05-31",
+    "title": "Trust no package: זיהוי נוזקות ב-NPM",
+    "authors": [
+      "ליאורה רבייב"
+    ],
+    "tags": [
+      "malware-analysis",
+      "cloud-security",
+      "static-analysis",
+      "tooling",
+      "evasion"
+    ]
+  },
+  {
+    "id": "0xBA-02",
+    "issue": 186,
+    "url": "https://www.digitalwhisper.co.il/issue186",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xBA/DW186-2-AUV.pdf",
+    "date": "2026-05-31",
+    "title": "הצי השקט: כלי מחקר תת ימיים חשופים לאינטרנט",
+    "authors": [
+      "אמיתי דן"
+    ],
+    "tags": [
+      "network-security",
+      "osint",
+      "ics-ot",
+      "vulnerability-research",
+      "physical-security"
+    ]
+  },
+  {
+    "id": "0xBA-03",
+    "issue": 186,
+    "url": "https://www.digitalwhisper.co.il/issue186",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xBA/DW186-3-SpywareIOS.pdf",
+    "date": "2026-05-31",
+    "title": "כיצד Spyware מסוג Predator עוקף את חיווי ההקלטה ב-iOS",
+    "authors": [
+      "ניר אברהם"
+    ],
+    "tags": [
+      "malware-analysis",
+      "mobile-security",
+      "reverse-engineering"
+    ]
+  },
+  {
+    "id": "0xBA-04",
+    "issue": 186,
+    "url": "https://www.digitalwhisper.co.il/issue186",
+    "pdf": "https://digitalwhisper.co.il/files/Zines/0xBA/DW186-4-VBS.pdf",
+    "date": "2026-05-31",
+    "title": "אבטחה מבוססת וירטואליזציה - Virtualization Based Security",
+    "authors": [
+      "ליאל חנוכוב"
+    ],
+    "tags": [
+      "windows-internals",
+      "reverse-engineering",
+      "windows-kernel",
+      "cloud-security"
+    ]
   }
 ]
