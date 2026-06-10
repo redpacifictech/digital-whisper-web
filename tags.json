@@ -1,7 +1,7 @@
 [
   {
     "tag": "network-security",
-    "count": 224,
+    "count": 225,
     "description": "Network protocols, attacks, defenses, and infrastructure."
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "tag": "malware-analysis",
-    "count": 138,
+    "count": 139,
     "description": "Analysis of malicious software and families."
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "tag": "evasion",
-    "count": 98,
+    "count": 99,
     "description": "Detection and mitigation evasion techniques."
   },
   {
     "tag": "hardware-security",
-    "count": 90,
+    "count": 91,
     "description": "Firmware, embedded, IoT, and hardware-level attacks."
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "tag": "mobile-security",
-    "count": 49,
+    "count": 50,
     "description": "Android and iOS application and platform security."
   },
   {
@@ -125,14 +125,14 @@
     "description": "Attacks on and with ML/AI models, LLMs, agents."
   },
   {
+    "tag": "vulnerability-research",
+    "count": 29,
+    "description": "Vulnerability research, disclosure, and management."
+  },
+  {
     "tag": "command-and-control",
     "count": 28,
     "description": "C2 infrastructure, beaconing, and botnets."
-  },
-  {
-    "tag": "vulnerability-research",
-    "count": 28,
-    "description": "Vulnerability research, disclosure, and management."
   },
   {
     "tag": "osint",
@@ -166,7 +166,7 @@
   },
   {
     "tag": "side-channel",
-    "count": 16,
+    "count": 17,
     "description": "Side-channel attacks."
   },
   {

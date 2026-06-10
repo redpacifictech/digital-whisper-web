@@ -14158,7 +14158,12 @@
     "authors": [
       "ידידיה בקורדזה"
     ],
-    "tags": []
+    "tags": [
+      "vulnerability-research",
+      "hardware-security",
+      "network-security",
+      "side-channel"
+    ]
   },
   {
     "id": "0xB9-02",
@@ -14205,7 +14210,11 @@
     "authors": [
       "ניר אברהם"
     ],
-    "tags": []
+    "tags": [
+      "malware-analysis",
+      "mobile-security",
+      "evasion"
+    ]
   },
   {
     "id": "0xB9-05",
